@@ -1,0 +1,25 @@
+{
+  "name": "typeburn",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "packages/server",
+    "packages/client"
+  ],
+  "scripts": {
+    "dev": "run-p dev:server dev:client",
+    "dev:server": "npm run dev --workspace=packages/server",
+    "dev:client": "npm run dev --workspace=packages/client",
+    "build": "npm run build --workspaces",
+    "preview": "run-p preview:server preview:client",
+    "preview:server": "npm run start --workspace=packages/server",
+    "preview:client": "npm run preview --workspace=packages/client",
+    "db:push": "npm run db:push --workspace=packages/server",
+    "db:seed": "npm run db:seed --workspace=packages/server",
+    "db:setup": "npm run db:push && npm run db:seed",
+    "test": "npm test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "npm-run-all2": "8.0.4"
+  }
+}
