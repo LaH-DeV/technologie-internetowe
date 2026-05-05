@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+
+  --color-bg: #0c0a09;
+  --color-bg-card: #1c1917;
+  --color-bg-hover: #292524;
+  --color-text: #fafaf9;
+  --color-text-muted: #78716c;
+  --color-primary: #ef4444;
+  --color-primary-hover: #dc2626;
+  --color-flame: #f97316;
+  --color-ember: #fbbf24;
+  --color-correct: #4ade80;
+  --color-incorrect: #f87171;
+  --color-incorrect-bg: rgba(248, 113, 113, 0.15);
+  --color-corrected: #fbbf24;
+  --color-corrected-bg: rgba(251, 191, 36, 0.15);
+  --color-caret: #f97316;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+select:not([disabled]),
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+.fire-text {
+  background: linear-gradient(to top, #ef4444, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fire-glow {
+  text-shadow:
+    0 0 10px rgba(239, 68, 68, 0.5),
+    0 0 30px rgba(249, 115, 22, 0.3),
+    0 0 60px rgba(251, 191, 36, 0.15);
+}

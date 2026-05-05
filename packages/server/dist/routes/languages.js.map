@@ -1,0 +1,1 @@
+{"version":3,"file":"languages.js","sourceRoot":"","sources":["../../src/routes/languages.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,qBAAqB,EAAE,MAAM,yBAAyB,CAAC;AAEhE,MAAM,CAAC,MAAM,eAAe,GAAuB,KAAK,EAAE,OAAO,EAAE,EAAE;IACnE,OAAO,CAAC,GAAG,CAAC,gBAAgB,EAAE,KAAK,IAAI,EAAE;QACvC,OAAO,qBAAqB,EAAE,CAAC;IACjC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC"}
