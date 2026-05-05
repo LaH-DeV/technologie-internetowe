@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porównanie wydajności animacji</title>
+    <style>
+        main {
+            position: relative;
+        }
+        div {
+            display: grid;
+            place-items: center;
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: var(--bg-color, gray);
+            animation: var(--animation, none);
+        }
+        .traditional-animation {
+            --bg-color: green;
+            --animation: traditionalMove 2s infinite;
+            position: absolute;
+            top: 100px;
+        }
+        .transform-opacity-animation {
+            --bg-color: blue;
+            --animation: transformOpacityMove 2s infinite;
+        }
+        @keyframes traditionalMove {
+            0% { left: 0; }
+            50% { left: 200px; }
+            100% { left: 0; }
+        }
+        @keyframes transformOpacityMove {
+            0% { transform: translateX(0); opacity: 1; }
+            50% { transform: translateX(200px); opacity: 0.5; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Porównanie wydajności animacji</h1>
+    <main>
+        <div class="transform-opacity-animation">Transformacja</div>
+        <div class="traditional-animation">Tradycyjna</div>
+    </main>
+</body>
+</html>

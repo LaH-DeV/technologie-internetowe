@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables - zmienne w CSS i ich wykorzystanie</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #1c8347;
+            --padding: 1rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        header, footer {
+            background-color: var(--secondary-color);
+            padding: var(--padding);
+            text-align: center;
+        }
+        main {
+            padding: var(--padding);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Strona z CSS Variables</h1>
+    </header>
+    <main>
+        <p>Przykładowy tekst na stronie</p>
+    </main>
+    <footer>
+        <p>Stopka strony</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Templates</title>
+    <style>
+        header, nav, main, aside, footer {
+            padding: 1rem;
+            color: white;
+            background-color: var(--bg-color, gray);
+        }
+        body {
+            display: grid;
+            gap: 1rem;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "main aside"
+                "footer footer";
+            grid-template-columns: 1fr 1fr;
+        }
+        header {
+            grid-area: header;
+            --bg-color: #333;
+        }
+        nav {
+            grid-area: nav;
+            --bg-color: #555;
+        }
+        main {
+            grid-area: main;
+            --bg-color: #9b9b9b;
+        }
+        aside {
+            grid-area: aside;
+            --bg-color: #999;
+        }
+        footer {
+            grid-area: footer;
+            --bg-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <nav>
+        Menu
+    </nav>
+    <main>
+        Treść
+    </main>
+    <aside>
+        Sidebar
+    </aside>
+    <footer>
+        Stopka
+    </footer>
+</body>
+</html>

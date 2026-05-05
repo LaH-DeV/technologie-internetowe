@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budowanie responsywnych layoutów</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            display: flex;
+        }
+        aside {
+            background-color: #a7a7a7;
+            width: 250px;
+            padding: 1rem;
+        }
+        main {
+            background-color: #e2e2e2;
+            flex: 1;
+            padding: 1rem;
+        }
+        @media (max-width: 768px) {
+            div {
+            flex-direction: column;
+            }
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <aside>
+            <p>Menu</p>
+        </aside>
+        <main>
+            <p>Treść główna</p>
+        </main>
+    </div>
+</body>
+</html>

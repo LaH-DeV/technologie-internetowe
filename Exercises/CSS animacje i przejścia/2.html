@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacja przycisku z transformacją i cieniowaniem</title>
+    <style>
+        button {
+            background-color: rgb(29, 160, 62);
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Animacja przycisku z transformacją i cieniowaniem</h1>
+    <button type="button">Kliknij mnie</button>
+</body>
+</html>

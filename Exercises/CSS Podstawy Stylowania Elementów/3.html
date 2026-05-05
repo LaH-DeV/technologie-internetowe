@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylowanie pudełek</title>
+    <style>
+        .box {
+            --bg-color: lightgreen;
+            background-color: var(--bg-color);
+            border: 5px solid #000;
+            width: 300px;
+            height: 150px;
+            box-sizing: content-box;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .box-red {
+            --bg-color: rgb(233, 141, 141);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stylowanie pudełek</h1>
+    <div class="box">
+        Content-box
+    </div>
+    <div class="box box-red">
+        Border-box
+    </div>
+</body>
+</html>

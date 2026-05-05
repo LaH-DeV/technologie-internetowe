@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wieloetapowa animacja z użyciem @keyframes</title>
+    <style>
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            background-color: purple;
+            animation: moveAndRotate 4s infinite;
+        }
+        @keyframes moveAndRotate {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                background-color: purple;
+            }
+            25% {
+                transform: translate(200px, 0) rotate(90deg);
+                background-color: rgb(160, 29, 62);
+            }
+            50% {
+                transform: translate(200px, 100px) rotate(180deg);
+                background-color: rgb(62, 29, 160);
+            }
+            75% {
+                transform: translate(0, 100px) rotate(270deg);
+                background-color: rgb(29, 62, 160);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+                background-color: purple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Wieloetapowa animacja z użyciem @keyframes</h1>
+    <div class="animated-box">Animacja</div>
+</body>
+</html>

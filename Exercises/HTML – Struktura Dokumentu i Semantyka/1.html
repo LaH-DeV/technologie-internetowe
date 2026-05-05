@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona osobista</title>
+</head>
+<body>
+    <header>
+        <h1>Przemysław Dylewski</h1>
+        <p>Frontend Software Engineer</p>
+        <nav>
+            <ul>
+                <li><a href="#o-mnie">O mnie</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="o-mnie">O mnie</h2>
+        <p>Jestem frontend software engineerem, pracuję w Allegro.</p>
+    </main>
+    <hr>
+    <section>
+        <h2 id="kontakt">Kontakt</h2>
+        <form action="mailto:przemyslaw.dylewski@example.com" method="post">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Wiadomość:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Przemysław Dylewski. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
