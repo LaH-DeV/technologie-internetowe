@@ -1,1 +1,0 @@
-{"version":3,"file":"anti-cheat.d.ts","sourceRoot":"","sources":["../../src/domain/anti-cheat.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,kBAAkB,CAAC;AAElD,UAAU,gBAAgB;IACxB,OAAO,EAAE,OAAO,CAAC;IACjB,MAAM,CAAC,EAAE,MAAM,CAAC;CACjB;AAOD,wBAAgB,eAAe,CAC7B,UAAU,EAAE,SAAS,EAAE,EACvB,kBAAkB,EAAE,MAAM,EAC1B,gBAAgB,CAAC,EAAE,MAAM,GACxB,gBAAgB,CA8ElB"}

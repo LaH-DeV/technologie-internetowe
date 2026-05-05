@@ -28,7 +28,7 @@ async function main() {
 
   const { repo, mode } = await createRepository();
   fastify.log.info(
-    `Storage: ${mode}${mode === "in-memory" ? " (DB unavailable — data will not persist)" : ""}`,
+    `Storage: ${mode}${mode === "in-memory" ? " (DB unavailable - data will not persist)" : ""}`,
   );
 
   await fastify.register(helmet, {
