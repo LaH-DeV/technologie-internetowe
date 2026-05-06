@@ -42,8 +42,11 @@ docker compose up db -d
 
 # Copy env and push schema
 cp .env.example .env
+cp packages/server/.env.example packages/server/.env
 npm run db:push
 npm run db:seed
+
+> If you are not using Docker, make sure the PostgreSQL database `typeburn` exists before running `npm run db:push`.
 
 # Start dev servers (client + API)
 npm run dev
