@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy walut</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body class="bg-light font-size">
+    <!-- Treść zadania -->
+    <div class="row m-2">
+        <div class="card  w-100">
+            <div class="card-header">
+                <h6 class="card-title m-0">Kursy Walut</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-justify font-size">
+                    Wykorzystując jedną z poznanych technologii AJAX a także korzystając
+                    z API Narodowego Banku Polskiego napisz skrypt
+                    tak aby uzyskać następujące funkcje:
+                </p>
+                <ol>
+                    <li class="mb-2 text-justify">
+                        <a>Utwórz połączenie asynchroniczne uruchamiane automatycznie przy otwarciu strony pobierające aktualne
+                            kursy walut NBP.
+                        </a>
+                        <br />
+                        <a>(url: „http://api.nbp.pl/api/exchangerates/tables/A/”)</a>
+                    </li>
+                    <li class="mb-2 text-justify">
+                        <a>Uzupełnij w nagłówku tabeli datę aktualizacji danych (id pola „dataaktualizacji) na podstawie
+                            danych z żądania z pkt 1.
+                        </a>
+                    </li>
+                    <li class="mb-2 text-justify">
+                        <a>Uzupełnij wiersze tabeli o dane dotyczące kursów walut na podstawie danych z żądania z pkt 1.
+                        </a>
+                    </li>
+                    <li class="mb-2 text-justify">
+                        <a>Napisz funkcje „odswiezDaneWTabeli” która zaktualizuje dane w tabeli po przyciśnięciu
+                            przycisku „Odśwież”.
+                        </a>
+                    </li>
+                </ol>
+                <a>Nie modyfikuj pliku HTML</a>
+            </div>
+        </div>
+    </div>
+    <!-- Rozwiązanie -->
+    <div class="row m-2">
+        <div class="card  w-100">
+            <div class="card-header">
+                <h6 class="card-title m-0">Rozwiązanie</h5>
+            </div>
+            <div class="card-body">
+                <div class="col-8 offset-2">
+                    <h5 class="text-center">Aktualne kursy walut</h5>
+                    <h6 class="text-center">Data aktualizacji: <span id="dataaktualizacji">Brak danych</span></h6>
+                    <button type="button" class="btn btn-outline-dark mb-1"
+                        onclick="odswiezDaneWTabeli()">Odśwież</button>
+                    <table id="tabelaKursow" class="table-responsive-md text-center table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lp.</th>
+                                <th scope="col">Waluta</th>
+                                <th scope="col">Kod</th>
+                                <th scope="col">Kurs</th>
+                            </tr>
+                        </thead>
+                        <tbody id="wierszetabeli">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    .font-size {
+        font-size: 0.9rem;
+    }
+</style>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 red, -2px 0 cyan;
+    }
+
+    25% {
+        text-shadow: -2px 0 lime, 2px 0 magenta;
+    }
+
+    50% {
+        text-shadow: 2px 0 blue, -2px 0 yellow;
+    }
+
+    75% {
+        text-shadow: -2px 0 red, 2px 0 cyan;
+    }
+
+    100% {
+        text-shadow: 2px 0 green, -2px 0 magenta;
+    }
+}
+
+@keyframes click-blink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
