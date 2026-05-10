@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodawanie dynamicznych elementów</title>
+</head>
+<body>
+    <ul id="itemList"></ul>
+    <button id="addItemButton">Dodaj element listy</button>
+
+    <script>
+        const addItemButton = document.getElementById('addItemButton');
+        const itemList = document.getElementById('itemList');
+        let itemCount = 0;
+
+        addItemButton.addEventListener('click', () => {
+            itemCount++;
+            const newItem = document.createElement('li');
+            newItem.textContent = `Element ${itemCount}`;
+            itemList.appendChild(newItem);
+        });
+    </script>
+</body>
+</html>

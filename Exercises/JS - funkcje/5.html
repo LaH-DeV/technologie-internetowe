@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 5</title>
+</head>
+<body>
+  <script>
+    const products = ["Telewizor", "Laptop", "Smartfon", "Konsola do gier", "Ładowarka bezprzewodowa",
+      "Słuchawki bezprzewodowe", "Tablet", "Aparat fotograficzny", "Drone", "Głośnik Bluetooth"];
+
+    const sortedAlphabetically = products.toSorted();
+    console.log("Posortowane alfabetycznie:", sortedAlphabetically);
+
+    const sortedByLength = products.toSorted((a, b) => a.length - b.length);
+    console.log("Posortowane od najkrótszych do najdłuższych:", sortedByLength);
+
+    console.log("Elementy tablicy:");
+    products.forEach((product) => console.log(product));
+
+    const totalLength = products.reduce((sum, product) => sum + product.length, 0);
+    console.log("Łączna długość wszystkich tekstów:", totalLength);
+
+    const filteredProducts = products.filter((product) => product.includes('a')); // zakładam, że chodzi tylko o małą literę 'a'
+    console.log("Elementy zawierające literę 'a':", filteredProducts);
+
+    const upperCaseProducts = products.map((product) => product.toUpperCase());
+    console.log("Elementy napisane wielkimi literami:", upperCaseProducts);
+  </script>
+</body>
+</html>

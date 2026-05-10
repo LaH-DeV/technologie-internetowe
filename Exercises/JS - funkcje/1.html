@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+</head>
+<body>
+    <script>
+        function powitajUzytkownika() {
+            const url = window.location.href;
+            const dzienTygodnia = new Intl.DateTimeFormat('pl-PL', { weekday: 'long' }).format(new Date());
+            alert(`Witaj użytkowniku! Jesteś na stronie: ${url}. Dziś jest: ${dzienTygodnia}.`);
+        }
+        powitajUzytkownika();
+    </script>
+</body>
+</html>

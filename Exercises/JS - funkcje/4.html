@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+</head>
+<body>
+    <script>
+        const numbers = [3, -6, 65, 50, -121, 4, -23, 52, 2, 0];
+
+        const sortedDescending = numbers.toSorted((a, b) => b - a);
+        console.log("Posortowane malejąco:", sortedDescending);
+
+        const sortedAbsolute = numbers.toSorted((a, b) => Math.abs(a) - Math.abs(b));
+        console.log("Posortowane wg. rosnącej wartości bezwględnej:", sortedAbsolute);
+
+        const filteredPositive = numbers.filter((n) => n > 0);
+        console.log("Liczby większe od 0:", filteredPositive);
+        const filteredEven = numbers.filter((n) => n % 2 === 0);
+        console.log("Liczby parzyste:", filteredEven);
+
+        console.log("Wszystkie liczby:");
+        numbers.forEach((n) => console.log(n));
+
+        const countGreaterThan5 = numbers.filter((n) => n > 5).length;
+        console.log("Liczba liczb większych od 5:", countGreaterThan5);
+    </script>
+</body>
+</html>

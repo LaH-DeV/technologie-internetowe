@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 3</title>
+</head>
+<body>
+  <input type="text" id="wpisanyTekst" placeholder="Wpisz tekst">
+  <button onclick="daneTekstowe()">Analizuj tekst</button>
+  <p id="liczbaZnakow"></p>
+  <p id="liczbaSpacji"></p>
+  <p id="liczbaSamoglosek"></p>
+  <script>
+    const SPACJA = " ";
+    const samogloski = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+    function daneTekstowe() {
+      const tekst = document.getElementById("wpisanyTekst").value;
+      const liczbaZnakow = tekst.length;
+      let liczbaSpacji = 0;
+      let liczbaSamoglosek = 0;
+
+      for (let i = 0; i < tekst.length; i++) {
+        if (tekst[i] === SPACJA) {
+          liczbaSpacji++;
+        }
+        if (samogloski.includes(tekst[i])) {
+          liczbaSamoglosek++;
+        }
+      }
+      document.getElementById("liczbaZnakow").textContent = "Liczba znaków: " + liczbaZnakow;
+      document.getElementById("liczbaSpacji").textContent = "Liczba spacji: " + liczbaSpacji;
+      document.getElementById("liczbaSamoglosek").textContent = "Liczba samogłosek: " + liczbaSamoglosek;
+
+      console.log("Liczba znaków:", liczbaZnakow);
+      console.log("Liczba spacji:", liczbaSpacji);
+      console.log("Liczba samogłosek:", liczbaSamoglosek);
+    }
+  </script>
+</body>
+</html>

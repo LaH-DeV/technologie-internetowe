@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz reagujący na zmiany</title>
+</head>
+<body>
+    <form>
+        <label for="textInput">Wpisz tekst:</label>
+        <input type="text" id="textInput" name="textInput">
+    </form>
+    <p id="output">Aktualna wartość: <span></span></p>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const output = document.getElementById('output');
+
+        textInput.addEventListener('input', () => {
+            output.querySelector('span').textContent = textInput.value;
+        });
+    </script>
+</body>
+</html>

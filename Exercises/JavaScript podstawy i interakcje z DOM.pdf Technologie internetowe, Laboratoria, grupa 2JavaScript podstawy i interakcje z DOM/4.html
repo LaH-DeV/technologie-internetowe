@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugowanie funkcji sumującej parzyste liczby</title>
+</head>
+<body>
+<script>
+    function sumujParzyste(tablica) {
+        let suma = 0;
+        for (let i = 0; i < tablica.length; i++) {
+            const liczba = tablica[i];
+            console.log("Iteracja:", i, "Liczba:", liczba, "Suma przed:", suma);
+            if (liczba % 2 !== 0) { // Błąd: powinno być liczba % 2 === 0
+                suma += liczba;
+            }
+            console.log("Suma po:", suma);
+        }
+        return suma;
+    }
+    const liczby = [1, 2, 3, 4, 5, 6];
+    const wynik = sumujParzyste(liczby);
+    console.log("Wynik sumowania parzystych liczb:", wynik);
+
+    console.log("Problem: Warunek jest niepoprawny, powinien być liczba % 2 === 0, aby sumować tylko parzyste liczby.");
+</script>
+</body>
+</html>
