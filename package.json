@@ -18,7 +18,10 @@
     "db:push": "npm run db:push --workspace=packages/server",
     "db:seed": "npm run db:seed --workspace=packages/server",
     "db:setup": "npm run db:push && npm run db:seed",
-    "test": "npm test --workspaces --if-present"
+    "test": "npm test --workspaces --if-present",
+    "presentation:embed": "node Presentation/embed.js",
+    "presentation:serve": "npx http-server -o .\\Presentation\\",
+    "presentation": "npm run presentation:embed && npm run presentation:serve"
   },
   "devDependencies": {
     "npm-run-all2": "8.0.4",
